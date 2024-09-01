@@ -34,5 +34,5 @@ firewall-cmd --permanent --zone=trusted --add-forward-port=port=8888:proto=tcp:t
 firewall-cmd --reload
 firewall-cmd --list-all-zones
 
-IPのリストを作成
+IPリストを作成
 for ip in $(seq 1 254); do echo 192.168.50.$ip; done > ips
