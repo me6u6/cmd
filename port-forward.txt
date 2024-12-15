@@ -1,0 +1,3 @@
+firewall-cmd --permanent --zone=trusted --add-forward-port=port=8888:proto=tcp:toport=8888:toaddr=192.168.1.200
+firewall-cmd --reload
+firewall-cmd --list-all-zones
