@@ -1,0 +1,1 @@
+script -qf `date +%Y%m%d`_`date +%H%M`.log

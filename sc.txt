@@ -1,0 +1,2 @@
+https://subro.mokuren.ne.jp/1710.html
+sc create hoge binPath= "C:\work\mattermost\bin\mattermost.exe server" DisplayName= "hoge"

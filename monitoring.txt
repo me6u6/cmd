@@ -1,0 +1,17 @@
+w
+last
+ss(netstat) -antup
+top
+wmstat
+ps aufxww
+/var/log/messages
+/var/log/sa/saxx(sar)
+/var/crash(core)
+
+【procps】 【vmstat】         【システム全体の負荷】
+【procps】 【top】            【CPU/メモリ/プロセス】
+【procps】 【free】           【メモリ】
+【sysstat】【sar】            【過去の負荷の履歴】
+【sysstat】【mpstat -P ALL 1】【コアごとの負荷】
+【sysstat】【iostat -dmxt 1】 【IO状況】
+【dstat】  【dstat -taf】     【コア/ボリューム/NIC】
