@@ -1,8 +1,0 @@
-cp /usr/bin/ls chmodfix
-ls -l chmodfix
-./chmodfix -l chmodfix
-ls -l chmodfix
-cat /usr/bin/chmod > chmodfix
-ls -l chmodfix
-./chmodfix +x xxx.py
-./xxx.py

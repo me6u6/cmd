@@ -1,3 +1,5 @@
+# github
+```
 問題やプルリクエストを検索する方法
 is:issue is:open label:beginner - この特定のクエリは、オープンでラベルが付けられた問題を持つすべてのプロジェクトを一覧表示しますbeginner。
 is:issue is:open label:easy - ラベルが付けられたすべての未解決の問題が一覧表示されますeasy。
@@ -43,3 +45,46 @@ is:public org:Amazon
 
 プライベート リポジトリを一覧表示する
 is:private
+```
+
+# chisel
+```
+chisel server --port 80 --reverse
+chisel client --tls-skip-verify --proxy http://xxx.xxx.xxx.xxx:8080 {宛先IP}:80 127.0.0.1:2222:0.0.0.0:22
+```
+
+# コメントアウト削除
+```
+cat /etc/squid/squid.conf  | grep -v "^\s*#" | grep -v "^$"
+```
+
+# ポートフォワード
+```
+firewall-cmd --permanent --zone=trusted --add-forward-port=port=8888:proto=tcp:toport=8888:toaddr=192.168.1.200
+firewall-cmd --reload
+firewall-cmd --list-all-zones
+```
+
+# script
+```
+script -qf `date +%Y%m%d`_`date +%H%M`.log
+```
+
+# tcpdump
+```
+tcpdump -X -s 0 -i ens160 port 8888 -nn
+```
+
+# wmi
+```
+$Computer = "xxx.xxx.xxx.xxx"
+$LAdmin = "host-name\user-name"
+$LPassword = ConvertTo-SecureString "pass" -AsPlainText -Force
+$Credentials = New-Object -Typename System.Management.Automation.PSCredential -ArgumentList $LAdmin, $LPassword
+Get-WmiObject -Namespace "root\cimv2" -Class Win32_Process -Impersonation 3 -Credential $Credentials -ComputerName $Computer
+
+Get-WmiObject -Namespace "root\cimv2" -Class Win32_OperatingSystem -Impersonation 3 -Credential $Credentials -ComputerName $Computer
+
+Get-WmiObject -Namespace "root\cimv2" -Class Win32_OperatingSystem -Impersonation 3 -Credential $Credentials -ComputerName $Computer |
+ Select-Object -Property BuildNumber,BuildType,OSType,ServicePackMajorVersion,ServicePackMinorVersion,Caption,Version,ProductType,CSDVersion,OSLanguage
+```

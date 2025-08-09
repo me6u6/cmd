@@ -1,1 +1,0 @@
-cat /etc/squid/squid.conf  | grep -v "^\s*#" | grep -v "^$"
